@@ -5,21 +5,25 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>WikiMusix Music Search</title>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Dosis"
+		/>
 		<link rel="stylesheet" href="./assets/styles/reset.css" />
 		<link rel="stylesheet" href="./assets/styles/styles.css" />
 		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
 	<body>
 		<header>
-			<h1>WikiMusix</h1>
+			<h1 class="w-fit mx-auto mt-24 mb-4 text-4xl">WikiMusix</h1>
 		</header>
-		<form>
+		<form class="music-search-form">
 			<input
 				type="text"
 				id="searchBar"
 				name="search-bar"
 				placeholder="Search any album, artist, or song..."
-			/><br />
+			/>
 			<select name="type-select" id="searchType">
 				<option value="song">Song</option>
 				<option value="album">Album</option>
@@ -27,7 +31,7 @@
 			</select>
 			<input type="submit" id="submitBtn" value="Search" />
 		</form>
-		<section id="card">
+		<section id="songCard">
 			<div id="albumArt"></div>
 			<!-- use CSS background-image property to fill and size -->
 			<div id="descriptionText">
