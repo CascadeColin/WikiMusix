@@ -9,5 +9,67 @@
 		<link rel="stylesheet" href="./assets/styles/styles.css" />
 		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
-	<body></body>
+	<body>
+		<header>
+			<h1>WikiMusix</h1>
+		</header>
+		<form>
+			<input
+				type="text"
+				id="searchBar"
+				name="search-bar"
+				placeholder="Search any album, artist, or song..."
+			/><br />
+			<select name="type-select" id="searchType">
+				<option value="song">Song</option>
+				<option value="album">Album</option>
+				<option value="artist">Artist</option>
+			</select>
+			<input type="submit" id="submitBtn" value="Search" />
+		</form>
+		<section id="card">
+			<div id="albumArt"></div>
+			<!-- use CSS background-image property to fill and size -->
+			<div id="descriptionText">
+				<h2 id="songTitle">Cheapskate</h2>
+				<h3 id="artistName">Oliver Tree</h3>
+				<h3 id="albumTitle">Cheapskate</h3>
+			</div>
+			<div id="customSearch">
+				<form id="customSearchForm">
+					<div id="checklistContainer">
+						<input
+							type="checkbox"
+							id="concerts"
+							name="concerts"
+							value="Concerts"
+						/>
+						<label for="concerts">Concerts</label>
+						<input
+							type="checkbox"
+							id="merch"
+							name="merch"
+							value="Merch"
+						/>
+						<label for="merch">Merch</label>
+						<input
+							type="checkbox"
+							id="collabs"
+							name="collabs"
+							value="Collabs"
+						/>
+						<label for="collabs">Collabs</label>
+						<input
+							type="checkbox"
+							id="socials"
+							name="socials"
+							value="Collabs"
+						/>
+						<label for="socials">Socials</label>
+					</div>
+					<input type="submit" id="customSearchBtn" value="Search" />
+				</form>
+			</div>
+		</section>
+	</body>
 </html>
