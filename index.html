@@ -10,70 +10,836 @@
 			href="https://fonts.googleapis.com/css?family=Dosis"
 		/>
 		<link rel="stylesheet" href="./assets/styles/reset.css" />
-		<link rel="stylesheet" href="./assets/styles/styles.css" />
+		<!-- <link rel="stylesheet" href="./assets/styles/styles.css" /> -->
 		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
-	<body>
+	<body class="bg-neutral-900">
 		<header>
-			<h1 class="w-fit mx-auto mt-24 mb-4 text-4xl">WikiMusix</h1>
+			<h1 class="w-fit mx-auto mt-80 mb-8 text-8xl text-neutral-100">
+				<span style="color: #fffcef">wiki</span
+				><span style="color: #b4a0e5">Musix</span>
+			</h1>
 		</header>
-		<form class="music-search-form">
+		<form class="flex w-full px-8 justify-center flex-wrap mb-20">
 			<input
 				type="text"
 				id="searchBar"
 				name="search-bar"
-				placeholder="Search any album, artist, or song..."
+				placeholder="Search any artist..."
+				class="pr-3 pl-5 py-2 mx-6 my-4 text-neutral-900 rounded-2xl border-none w-96 focus:outline-none"
+				style="background-color: #fffcef"
 			/>
-			<select name="type-select" id="searchType">
-				<option value="song">Song</option>
-				<option value="album">Album</option>
-				<option value="artist">Artist</option>
-			</select>
-			<input type="submit" id="submitBtn" value="Search" />
+			<button
+				class="bg-red-900 px-6 rounded-2xl mx-6 my-4 h-10"
+				style="color: #fffcef"
+			>
+				Search
+			</button>
 		</form>
-		<section id="songCard">
-			<div id="albumArt"></div>
-			<!-- use CSS background-image property to fill and size -->
-			<div id="descriptionText">
-				<h2 id="songTitle">Cheapskate</h2>
-				<h3 id="artistName">Oliver Tree</h3>
-				<h3 id="albumTitle">Cheapskate</h3>
-			</div>
-			<div id="customSearch">
-				<form id="customSearchForm">
-					<div id="checklistContainer">
+		<div
+			id="cardContainer"
+			class="flex flex-wrap lg:w-3/4 md:w-3/4 sm:w-4/5 mx-auto justify-center"
+		>
+			<section
+				id="songCard"
+				class="flex flex-col w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
+			>
+				<header
+					class="block rounded-t-xl w-full px-5 py-3 text-3xl"
+					style="background-color: #b4a0e5"
+				>
+					Oliver Tree
+				</header>
+				<div
+					id="cardCenterFlex"
+					class="flex mt-5 justify-around"
+					style="color: #fffcef"
+				>
+					<section id="rating">
+						<p class="text-xl">Rating:</p>
+						<p
+							class="text-3xl text-center mt-5"
+							style="color: #fffcef"
+						>
+							91<span style="color: #fffcef">%</span>
+						</p>
+					</section>
+					<ol
+						id="songList"
+						class="text-xl list-decimal"
+						style="max-width: 135px; color: #fffcef"
+					>
+						Top songs:
+						<li id="song" class="text-2xl">Miss You</li>
+						<li id="song" class="text-2xl">Sick Of U</li>
+						<li id="song" class="text-2xl">Life Goes On</li>
+					</ol>
+				</div>
+				<div id="customSearch">
+					<form
+						id="customSearchForm"
+						class="flex w-full mb-5 mt-6 justify-around"
+					>
+						<div id="checklistContainer" style="color: #fffcef">
+							<input
+								type="checkbox"
+								id="concerts"
+								name="concerts"
+								value="Concerts"
+							/>
+							<label for="concerts">Concerts</label><br />
+							<input
+								type="checkbox"
+								id="merch"
+								name="merch"
+								value="Merch"
+							/>
+							<label for="merch">Merch</label><br />
+							<input
+								type="checkbox"
+								id="collabs"
+								name="collabs"
+								value="Collabs"
+							/>
+							<label for="collabs">Collabs</label><br />
+							<input
+								type="checkbox"
+								id="socials"
+								name="socials"
+								value="Collabs"
+							/>
+							<label for="socials">Socials</label>
+						</div>
 						<input
-							type="checkbox"
-							id="concerts"
-							name="concerts"
-							value="Concerts"
+							type="submit"
+							id="customSearchBtn"
+							value="Search"
+							class="bg-red-900 px-6 rounded-2xl h-10 my-auto cursor-pointer"
+							style="color: #fffcef"
 						/>
-						<label for="concerts">Concerts</label>
+					</form>
+				</div>
+			</section>
+			<section
+				id="songCard"
+				class="flex flex-col w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
+			>
+				<header
+					class="block rounded-t-xl w-full px-5 py-3 text-3xl"
+					style="background-color: #b4a0e5"
+				>
+					Oliver Tree
+				</header>
+				<div
+					id="cardCenterFlex"
+					class="flex mt-5 justify-around"
+					style="color: #fffcef"
+				>
+					<section id="rating">
+						<p class="text-xl">Rating:</p>
+						<p
+							class="text-3xl text-center mt-5"
+							style="color: #fffcef"
+						>
+							91<span style="color: #fffcef">%</span>
+						</p>
+					</section>
+					<ol
+						id="songList"
+						class="text-xl list-decimal"
+						style="max-width: 135px; color: #fffcef"
+					>
+						Top songs:
+						<li id="song" class="text-2xl">Miss You</li>
+						<li id="song" class="text-2xl">Sick Of U</li>
+						<li id="song" class="text-2xl">Life Goes On</li>
+					</ol>
+				</div>
+				<div id="customSearch">
+					<form
+						id="customSearchForm"
+						class="flex w-full mb-5 mt-6 justify-around"
+					>
+						<div id="checklistContainer" style="color: #fffcef">
+							<input
+								type="checkbox"
+								id="concerts"
+								name="concerts"
+								value="Concerts"
+							/>
+							<label for="concerts">Concerts</label><br />
+							<input
+								type="checkbox"
+								id="merch"
+								name="merch"
+								value="Merch"
+							/>
+							<label for="merch">Merch</label><br />
+							<input
+								type="checkbox"
+								id="collabs"
+								name="collabs"
+								value="Collabs"
+							/>
+							<label for="collabs">Collabs</label><br />
+							<input
+								type="checkbox"
+								id="socials"
+								name="socials"
+								value="Collabs"
+							/>
+							<label for="socials">Socials</label>
+						</div>
 						<input
-							type="checkbox"
-							id="merch"
-							name="merch"
-							value="Merch"
+							type="submit"
+							id="customSearchBtn"
+							value="Search"
+							class="bg-red-900 px-6 rounded-2xl h-10 my-auto cursor-pointer"
+							style="color: #fffcef"
 						/>
-						<label for="merch">Merch</label>
+					</form>
+				</div>
+			</section>
+			<section
+				id="songCard"
+				class="flex flex-col w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
+			>
+				<header
+					class="block rounded-t-xl w-full px-5 py-3 text-3xl"
+					style="background-color: #b4a0e5"
+				>
+					Oliver Tree
+				</header>
+				<div
+					id="cardCenterFlex"
+					class="flex mt-5 justify-around"
+					style="color: #fffcef"
+				>
+					<section id="rating">
+						<p class="text-xl">Rating:</p>
+						<p
+							class="text-3xl text-center mt-5"
+							style="color: #fffcef"
+						>
+							91<span style="color: #fffcef">%</span>
+						</p>
+					</section>
+					<ol
+						id="songList"
+						class="text-xl list-decimal"
+						style="max-width: 135px; color: #fffcef"
+					>
+						Top songs:
+						<li id="song" class="text-2xl">Miss You</li>
+						<li id="song" class="text-2xl">Sick Of U</li>
+						<li id="song" class="text-2xl">Life Goes On</li>
+					</ol>
+				</div>
+				<div id="customSearch">
+					<form
+						id="customSearchForm"
+						class="flex w-full mb-5 mt-6 justify-around"
+					>
+						<div id="checklistContainer" style="color: #fffcef">
+							<input
+								type="checkbox"
+								id="concerts"
+								name="concerts"
+								value="Concerts"
+							/>
+							<label for="concerts">Concerts</label><br />
+							<input
+								type="checkbox"
+								id="merch"
+								name="merch"
+								value="Merch"
+							/>
+							<label for="merch">Merch</label><br />
+							<input
+								type="checkbox"
+								id="collabs"
+								name="collabs"
+								value="Collabs"
+							/>
+							<label for="collabs">Collabs</label><br />
+							<input
+								type="checkbox"
+								id="socials"
+								name="socials"
+								value="Collabs"
+							/>
+							<label for="socials">Socials</label>
+						</div>
 						<input
-							type="checkbox"
-							id="collabs"
-							name="collabs"
-							value="Collabs"
+							type="submit"
+							id="customSearchBtn"
+							value="Search"
+							class="bg-red-900 px-6 rounded-2xl h-10 my-auto cursor-pointer"
+							style="color: #fffcef"
 						/>
-						<label for="collabs">Collabs</label>
+					</form>
+				</div>
+			</section>
+			<section
+				id="songCard"
+				class="flex flex-col w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
+			>
+				<header
+					class="block rounded-t-xl w-full px-5 py-3 text-3xl"
+					style="background-color: #b4a0e5"
+				>
+					Oliver Tree
+				</header>
+				<div
+					id="cardCenterFlex"
+					class="flex mt-5 justify-around"
+					style="color: #fffcef"
+				>
+					<section id="rating">
+						<p class="text-xl">Rating:</p>
+						<p
+							class="text-3xl text-center mt-5"
+							style="color: #fffcef"
+						>
+							91<span style="color: #fffcef">%</span>
+						</p>
+					</section>
+					<ol
+						id="songList"
+						class="text-xl list-decimal"
+						style="max-width: 135px; color: #fffcef"
+					>
+						Top songs:
+						<li id="song" class="text-2xl">Miss You</li>
+						<li id="song" class="text-2xl">Sick Of U</li>
+						<li id="song" class="text-2xl">Life Goes On</li>
+					</ol>
+				</div>
+				<div id="customSearch">
+					<form
+						id="customSearchForm"
+						class="flex w-full mb-5 mt-6 justify-around"
+					>
+						<div id="checklistContainer" style="color: #fffcef">
+							<input
+								type="checkbox"
+								id="concerts"
+								name="concerts"
+								value="Concerts"
+							/>
+							<label for="concerts">Concerts</label><br />
+							<input
+								type="checkbox"
+								id="merch"
+								name="merch"
+								value="Merch"
+							/>
+							<label for="merch">Merch</label><br />
+							<input
+								type="checkbox"
+								id="collabs"
+								name="collabs"
+								value="Collabs"
+							/>
+							<label for="collabs">Collabs</label><br />
+							<input
+								type="checkbox"
+								id="socials"
+								name="socials"
+								value="Collabs"
+							/>
+							<label for="socials">Socials</label>
+						</div>
 						<input
-							type="checkbox"
-							id="socials"
-							name="socials"
-							value="Collabs"
+							type="submit"
+							id="customSearchBtn"
+							value="Search"
+							class="bg-red-900 px-6 rounded-2xl h-10 my-auto cursor-pointer"
+							style="color: #fffcef"
 						/>
-						<label for="socials">Socials</label>
-					</div>
-					<input type="submit" id="customSearchBtn" value="Search" />
-				</form>
-			</div>
-		</section>
+					</form>
+				</div>
+			</section>
+			<section
+				id="songCard"
+				class="flex flex-col w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
+			>
+				<header
+					class="block rounded-t-xl w-full px-5 py-3 text-3xl"
+					style="background-color: #b4a0e5"
+				>
+					Oliver Tree
+				</header>
+				<div
+					id="cardCenterFlex"
+					class="flex mt-5 justify-around"
+					style="color: #fffcef"
+				>
+					<section id="rating">
+						<p class="text-xl">Rating:</p>
+						<p
+							class="text-3xl text-center mt-5"
+							style="color: #fffcef"
+						>
+							91<span style="color: #fffcef">%</span>
+						</p>
+					</section>
+					<ol
+						id="songList"
+						class="text-xl list-decimal"
+						style="max-width: 135px; color: #fffcef"
+					>
+						Top songs:
+						<li id="song" class="text-2xl">Miss You</li>
+						<li id="song" class="text-2xl">Sick Of U</li>
+						<li id="song" class="text-2xl">Life Goes On</li>
+					</ol>
+				</div>
+				<div id="customSearch">
+					<form
+						id="customSearchForm"
+						class="flex w-full mb-5 mt-6 justify-around"
+					>
+						<div id="checklistContainer" style="color: #fffcef">
+							<input
+								type="checkbox"
+								id="concerts"
+								name="concerts"
+								value="Concerts"
+							/>
+							<label for="concerts">Concerts</label><br />
+							<input
+								type="checkbox"
+								id="merch"
+								name="merch"
+								value="Merch"
+							/>
+							<label for="merch">Merch</label><br />
+							<input
+								type="checkbox"
+								id="collabs"
+								name="collabs"
+								value="Collabs"
+							/>
+							<label for="collabs">Collabs</label><br />
+							<input
+								type="checkbox"
+								id="socials"
+								name="socials"
+								value="Collabs"
+							/>
+							<label for="socials">Socials</label>
+						</div>
+						<input
+							type="submit"
+							id="customSearchBtn"
+							value="Search"
+							class="bg-red-900 px-6 rounded-2xl h-10 my-auto cursor-pointer"
+							style="color: #fffcef"
+						/>
+					</form>
+				</div>
+			</section>
+			<section
+				id="songCard"
+				class="flex flex-col w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
+			>
+				<header
+					class="block rounded-t-xl w-full px-5 py-3 text-3xl"
+					style="background-color: #b4a0e5"
+				>
+					Oliver Tree
+				</header>
+				<div
+					id="cardCenterFlex"
+					class="flex mt-5 justify-around"
+					style="color: #fffcef"
+				>
+					<section id="rating">
+						<p class="text-xl">Rating:</p>
+						<p
+							class="text-3xl text-center mt-5"
+							style="color: #fffcef"
+						>
+							91<span style="color: #fffcef">%</span>
+						</p>
+					</section>
+					<ol
+						id="songList"
+						class="text-xl list-decimal"
+						style="max-width: 135px; color: #fffcef"
+					>
+						Top songs:
+						<li id="song" class="text-2xl">Miss You</li>
+						<li id="song" class="text-2xl">Sick Of U</li>
+						<li id="song" class="text-2xl">Life Goes On</li>
+					</ol>
+				</div>
+				<div id="customSearch">
+					<form
+						id="customSearchForm"
+						class="flex w-full mb-5 mt-6 justify-around"
+					>
+						<div id="checklistContainer" style="color: #fffcef">
+							<input
+								type="checkbox"
+								id="concerts"
+								name="concerts"
+								value="Concerts"
+							/>
+							<label for="concerts">Concerts</label><br />
+							<input
+								type="checkbox"
+								id="merch"
+								name="merch"
+								value="Merch"
+							/>
+							<label for="merch">Merch</label><br />
+							<input
+								type="checkbox"
+								id="collabs"
+								name="collabs"
+								value="Collabs"
+							/>
+							<label for="collabs">Collabs</label><br />
+							<input
+								type="checkbox"
+								id="socials"
+								name="socials"
+								value="Collabs"
+							/>
+							<label for="socials">Socials</label>
+						</div>
+						<input
+							type="submit"
+							id="customSearchBtn"
+							value="Search"
+							class="bg-red-900 px-6 rounded-2xl h-10 my-auto cursor-pointer"
+							style="color: #fffcef"
+						/>
+					</form>
+				</div>
+			</section>
+			<section
+				id="songCard"
+				class="flex flex-col w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
+			>
+				<header
+					class="block rounded-t-xl w-full px-5 py-3 text-3xl"
+					style="background-color: #b4a0e5"
+				>
+					Oliver Tree
+				</header>
+				<div
+					id="cardCenterFlex"
+					class="flex mt-5 justify-around"
+					style="color: #fffcef"
+				>
+					<section id="rating">
+						<p class="text-xl">Rating:</p>
+						<p
+							class="text-3xl text-center mt-5"
+							style="color: #fffcef"
+						>
+							91<span style="color: #fffcef">%</span>
+						</p>
+					</section>
+					<ol
+						id="songList"
+						class="text-xl list-decimal"
+						style="max-width: 135px; color: #fffcef"
+					>
+						Top songs:
+						<li id="song" class="text-2xl">Miss You</li>
+						<li id="song" class="text-2xl">Sick Of U</li>
+						<li id="song" class="text-2xl">Life Goes On</li>
+					</ol>
+				</div>
+				<div id="customSearch">
+					<form
+						id="customSearchForm"
+						class="flex w-full mb-5 mt-6 justify-around"
+					>
+						<div id="checklistContainer" style="color: #fffcef">
+							<input
+								type="checkbox"
+								id="concerts"
+								name="concerts"
+								value="Concerts"
+							/>
+							<label for="concerts">Concerts</label><br />
+							<input
+								type="checkbox"
+								id="merch"
+								name="merch"
+								value="Merch"
+							/>
+							<label for="merch">Merch</label><br />
+							<input
+								type="checkbox"
+								id="collabs"
+								name="collabs"
+								value="Collabs"
+							/>
+							<label for="collabs">Collabs</label><br />
+							<input
+								type="checkbox"
+								id="socials"
+								name="socials"
+								value="Collabs"
+							/>
+							<label for="socials">Socials</label>
+						</div>
+						<input
+							type="submit"
+							id="customSearchBtn"
+							value="Search"
+							class="bg-red-900 px-6 rounded-2xl h-10 my-auto cursor-pointer"
+							style="color: #fffcef"
+						/>
+					</form>
+				</div>
+			</section>
+			<section
+				id="songCard"
+				class="flex flex-col w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
+			>
+				<header
+					class="block rounded-t-xl w-full px-5 py-3 text-3xl"
+					style="background-color: #b4a0e5"
+				>
+					Oliver Tree
+				</header>
+				<div
+					id="cardCenterFlex"
+					class="flex mt-5 justify-around"
+					style="color: #fffcef"
+				>
+					<section id="rating">
+						<p class="text-xl">Rating:</p>
+						<p
+							class="text-3xl text-center mt-5"
+							style="color: #fffcef"
+						>
+							91<span style="color: #fffcef">%</span>
+						</p>
+					</section>
+					<ol
+						id="songList"
+						class="text-xl list-decimal"
+						style="max-width: 135px; color: #fffcef"
+					>
+						Top songs:
+						<li id="song" class="text-2xl">Miss You</li>
+						<li id="song" class="text-2xl">Sick Of U</li>
+						<li id="song" class="text-2xl">Life Goes On</li>
+					</ol>
+				</div>
+				<div id="customSearch">
+					<form
+						id="customSearchForm"
+						class="flex w-full mb-5 mt-6 justify-around"
+					>
+						<div id="checklistContainer" style="color: #fffcef">
+							<input
+								type="checkbox"
+								id="concerts"
+								name="concerts"
+								value="Concerts"
+							/>
+							<label for="concerts">Concerts</label><br />
+							<input
+								type="checkbox"
+								id="merch"
+								name="merch"
+								value="Merch"
+							/>
+							<label for="merch">Merch</label><br />
+							<input
+								type="checkbox"
+								id="collabs"
+								name="collabs"
+								value="Collabs"
+							/>
+							<label for="collabs">Collabs</label><br />
+							<input
+								type="checkbox"
+								id="socials"
+								name="socials"
+								value="Collabs"
+							/>
+							<label for="socials">Socials</label>
+						</div>
+						<input
+							type="submit"
+							id="customSearchBtn"
+							value="Search"
+							class="bg-red-900 px-6 rounded-2xl h-10 my-auto cursor-pointer"
+							style="color: #fffcef"
+						/>
+					</form>
+				</div>
+			</section>
+			<section
+				id="songCard"
+				class="flex flex-col w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
+			>
+				<header
+					class="block rounded-t-xl w-full px-5 py-3 text-3xl"
+					style="background-color: #b4a0e5"
+				>
+					Oliver Tree
+				</header>
+				<div
+					id="cardCenterFlex"
+					class="flex mt-5 justify-around"
+					style="color: #fffcef"
+				>
+					<section id="rating">
+						<p class="text-xl">Rating:</p>
+						<p
+							class="text-3xl text-center mt-5"
+							style="color: #fffcef"
+						>
+							91<span style="color: #fffcef">%</span>
+						</p>
+					</section>
+					<ol
+						id="songList"
+						class="text-xl list-decimal"
+						style="max-width: 135px; color: #fffcef"
+					>
+						Top songs:
+						<li id="song" class="text-2xl">Miss You</li>
+						<li id="song" class="text-2xl">Sick Of U</li>
+						<li id="song" class="text-2xl">Life Goes On</li>
+					</ol>
+				</div>
+				<div id="customSearch">
+					<form
+						id="customSearchForm"
+						class="flex w-full mb-5 mt-6 justify-around"
+					>
+						<div id="checklistContainer" style="color: #fffcef">
+							<input
+								type="checkbox"
+								id="concerts"
+								name="concerts"
+								value="Concerts"
+							/>
+							<label for="concerts">Concerts</label><br />
+							<input
+								type="checkbox"
+								id="merch"
+								name="merch"
+								value="Merch"
+							/>
+							<label for="merch">Merch</label><br />
+							<input
+								type="checkbox"
+								id="collabs"
+								name="collabs"
+								value="Collabs"
+							/>
+							<label for="collabs">Collabs</label><br />
+							<input
+								type="checkbox"
+								id="socials"
+								name="socials"
+								value="Collabs"
+							/>
+							<label for="socials">Socials</label>
+						</div>
+						<input
+							type="submit"
+							id="customSearchBtn"
+							value="Search"
+							class="bg-red-900 px-6 rounded-2xl h-10 my-auto cursor-pointer"
+							style="color: #fffcef"
+						/>
+					</form>
+				</div>
+			</section>
+			<section
+				id="songCard"
+				class="flex flex-col w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
+			>
+				<header
+					class="block rounded-t-xl w-full px-5 py-3 text-3xl"
+					style="background-color: #b4a0e5"
+				>
+					Oliver Tree
+				</header>
+				<div
+					id="cardCenterFlex"
+					class="flex mt-5 justify-around"
+					style="color: #fffcef"
+				>
+					<section id="rating">
+						<p class="text-xl">Rating:</p>
+						<p
+							class="text-3xl text-center mt-5"
+							style="color: #fffcef"
+						>
+							91<span style="color: #fffcef">%</span>
+						</p>
+					</section>
+					<ol
+						id="songList"
+						class="text-xl list-decimal"
+						style="max-width: 135px; color: #fffcef"
+					>
+						Top songs:
+						<li id="song" class="text-2xl">Miss You</li>
+						<li id="song" class="text-2xl">Sick Of U</li>
+						<li id="song" class="text-2xl">Life Goes On</li>
+					</ol>
+				</div>
+				<div id="customSearch">
+					<form
+						id="customSearchForm"
+						class="flex w-full mb-5 mt-6 justify-around"
+					>
+						<div id="checklistContainer" style="color: #fffcef">
+							<input
+								type="checkbox"
+								id="concerts"
+								name="concerts"
+								value="Concerts"
+							/>
+							<label for="concerts">Concerts</label><br />
+							<input
+								type="checkbox"
+								id="merch"
+								name="merch"
+								value="Merch"
+							/>
+							<label for="merch">Merch</label><br />
+							<input
+								type="checkbox"
+								id="collabs"
+								name="collabs"
+								value="Collabs"
+							/>
+							<label for="collabs">Collabs</label><br />
+							<input
+								type="checkbox"
+								id="socials"
+								name="socials"
+								value="Collabs"
+							/>
+							<label for="socials">Socials</label>
+						</div>
+						<input
+							type="submit"
+							id="customSearchBtn"
+							value="Search"
+							class="bg-red-900 px-6 rounded-2xl h-10 my-auto cursor-pointer"
+							style="color: #fffcef"
+						/>
+					</form>
+				</div>
+			</section>
+		</div>
 	</body>
 </html>
