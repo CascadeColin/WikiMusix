@@ -1,28 +1,5 @@
-//Musixmatch API key: ad27421f1b1b34223a74c789cd5b9585
-//DOCS: https://developer.musixmatch.com/documentation
-
-
-//GCS API key: AIzaSyBGlCTzDBwNgNajShcFZS6eNIMSRLtsddY
-
-//////////////////////////////////////////////////////////
-//////////////   TO-DO   /////////////////////////////////
-//////////////////////////////////////////////////////////
-
-/*
-include in head of HTML
-<script async src="https://cse.google.com/cse.js?cx=e40401ab6122d4604">
-</script>
-
-div to include GCS into page content
-customizable, see https://developers.google.com/custom-search/docs/element
-<div class="gcse-search"></div>
-
-
-
-*/
-
-searchBar = document.querySelector('#searchBar');
-button = document.querySelector('#button');
+searchBar = document.querySelector('.search-bar');
+button = document.querySelector('.artist-search-btn');
 
 button.addEventListener("click", getArtistID);
 
@@ -31,9 +8,15 @@ state = 1
 //main function
 function getArtistID(e) {
     e.preventDefault();
+
+    //format user input for api call
     userInput = searchBar.value.toLowerCase();
     userInput = userInput.replaceAll(' ','-')
+
+    //concatenate req URL
     var requestURL = 'https://api.napster.com/v2.2/artists/'+userInput+'?&apikey=Y2Q4NGE2MTMtMGI2Ni00ZGEwLWE3NWItNGFjMTMyYjg0NzYz'
+
+    //call API
     fetch(requestURL) 
         .then(function (response) {
            return response.json();
@@ -41,12 +24,13 @@ function getArtistID(e) {
         .then(function(data) {
             var artistId = data.artists[0].id;
             for (i=0;i<3;i++) {
-                document.querySelector('#header'+state).innerHTML = data.artists[0].name;
+                // document.querySelector('#header'+state).innerHTML = data.artists[0].name;
             }
             state++;
+            console.log(data);
             similarArtists(artistId);
-            topSongs(artistId);
-            topAlbums(artistId);
+            // topSongs(artistId);
+            // topAlbums(artistId);
         })
 }
 
@@ -62,6 +46,7 @@ function similarArtists(artistId) {
                 console.log(data.artists[i].name);
                 //domHook.children[i].innerHTML = data.artists[i].name;
             }
+            console.log(data);
         })
 }
 
