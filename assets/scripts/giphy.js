@@ -34,4 +34,4 @@ artistGif.setAttribute('background-image', artistGif);
 
 //brainstorm ideas for how to use gifs
 // can generate up to 50 gifs per search:  display them all on page below card?
-// 
+// utilize localStorage
