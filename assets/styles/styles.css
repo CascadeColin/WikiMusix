@@ -1,0 +1,64 @@
+.search-bar {
+    background-color: #fffcef;
+}
+
+.artist-search-btn {
+    color: #fffcef;
+    background-color: #a33c3c;
+    transition: 0.1s ease;
+}
+
+.artist-search-btn:hover {
+    background-color: #a33c3c;
+    transition: 0.1s ease;
+}
+
+.card-container {
+    display: flex;
+}
+
+.artist-name {
+    background-color: #b4a0e5;
+}
+
+.card-center {
+    color: #fffcef;
+}
+
+.gif-content {
+    background-image: url('https://media.giphy.com/media/7WvAUvZZTRpSuudobh/giphy.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes btn-invalid {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(1px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-2px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
