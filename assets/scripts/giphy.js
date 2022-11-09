@@ -9,11 +9,12 @@ const APIKEY = 'k7ib5hd5qzn7oJfBjJsdPcK1mCKE1mZm';
 let artistGif;
 let searchBtnEl = document.querySelector('artist-search-btn');
 let searchInputEl = document.querySelector('search-bar');
+
 let gifDisplay = document.querySelector('gif-content');
 //user generated in .search-bar
 let userInput = '';
 // limit = # of results (max 50), rating = normal movie ratings (use g or pg)
-let query = 'https://api.giphy.com/v1/gifs/search?q=' + userInput + '&api_key=k7ib5hd5qzn7oJfBjJsdPcK1mCKE1mZm&limit=1&rating=pg';
+let query = 'https://api.giphy.com/v1/gifs/search?q=' + userInput.trim() + '&api_key=k7ib5hd5qzn7oJfBjJsdPcK1mCKE1mZm&limit=1&rating=pg';
 
 fetch(query)
 .then((response) => {
