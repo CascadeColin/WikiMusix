@@ -43,12 +43,14 @@ function similarArtists(artistId) {
         .then(function(data) {
 
             //iterate through the first 5 similar artists
+            // CHANGED TO 1 DUE TO GIPHY API LIMITS
             for(i=0;i<5;i++) {
                 //get data for the ith artist
                 let name = data.artists[i].name;
                 let blurb = data.artists[i].blurbs[0];
+                let gifQueryInput = name.toLowerCase().replaceAll(' ','-');
                 //get a gif of the artist
-                let gifURL = "url('" + getGif(name) + "')";
+                let gifURL = "url('" + getGif(gifQueryInput) + "')";
                 
                 //update ith card with ith artist info
                 cardHeaderCollection[i].textContent = name;
@@ -58,6 +60,25 @@ function similarArtists(artistId) {
         })
 }
 
+
+
+function getGif(name) { 
+
+    let query = 'https://api.giphy.com/v1/gifs/search?q=' + name + '&api_key=k7ib5hd5qzn7oJfBjJsdPcK1mCKE1mZm&limit=1&rating=pg';
+
+    // fetch(query)
+    // .then((response) => {
+    //     return response.json();
+    // })
+    // .then((giphy) => {
+    //     //gets URL for img tag
+    //     console.log(giphy);
+    //     console.log(giphy.data[0].url);
+    //     return giphy.data[0].url;
+    // })
+
+    return "https://media2.giphy.com/media/U23WekMlGy6cImpMim/giphy.gif?cid=0a15940c15f3x16vjjgqtov3byb1mkfx1vfwumfoe1ogzp9m&rid=giphy.gif&ct=g";
+}
 
 
 
