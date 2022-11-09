@@ -26,6 +26,8 @@ button = document.querySelector('#button');
 
 button.addEventListener("click", getArtistID);
 
+state = 1
+
 //main function
 function getArtistID(e) {
     e.preventDefault();
@@ -38,6 +40,10 @@ function getArtistID(e) {
         })
         .then(function(data) {
             var artistId = data.artists[0].id;
+            for (i=0;i<3;i++) {
+                document.querySelector('#header'+state).innerHTML = data.artists[0].name;
+            }
+            state++;
             similarArtists(artistId);
             topSongs(artistId);
             topAlbums(artistId);
@@ -59,7 +65,7 @@ function similarArtists(artistId) {
         })
 }
 
-//spits out top 3 albums & a src link for the top album art;
+//spits out top 3 albums & a src link for the top album art; Actively fills first three children based off state and 
 function topAlbums(artistId) {
     var requestURL = 'https://api.napster.com/v2.2/artists/'+artistId+'/albums/top?limit=5&apikey=Y2Q4NGE2MTMtMGI2Ni00ZGEwLWE3NWItNGFjMTMyYjg0NzYz'
     fetch(requestURL) 
@@ -71,7 +77,7 @@ function topAlbums(artistId) {
             console.log(data.albums[0].id)
             albumId = data.albums[0].id;
             for(i=0;i<3;i++) {
-             //   domHook.children[i].innerHTML = '#' + (i+1) + ':' + data.albums[i].name
+             document.querySelector('#songList'+(state-1)).children[i].innerHTML = data.albums[i].name
              console.log(data.albums[i].name)
             }
             var requestURL = 'https://api.napster.com/v2.2/albums/'+albumId+'/images?apikey=Y2Q4NGE2MTMtMGI2Ni00ZGEwLWE3NWItNGFjMTMyYjg0NzYz'
