@@ -38,7 +38,11 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Badges
+<!-- update %age for JS, CSS, & HTML --> 
+![JavaScript](https://img.shields.io/badge/JavaScript-42%25-yellow) ![CSS](https://img.shields.io/badge/CSS-19.5%25-lightgrey) ![HTML](https://img.shields.io/badge/HTML-38.5%25-blue)
+
+![Tailwind](https://img.shields.io/badge/Tailwind-CSS-blue) ![Google Fonts](https://img.shields.io/badge/Google-Fonts-white)
+
+![Napster API](https://img.shields.io/badge/Napster-API-white) ![Giphy API](https://img.shields.io/badge/Giphy-API-white)
 
 ![MIT License](https://img.shields.io/badge/License-MIT-brightgreen)
-
-ADD MORE
