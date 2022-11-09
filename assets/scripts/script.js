@@ -44,7 +44,7 @@ function similarArtists(artistId) {
 
             //iterate through the first 5 similar artists
             // CHANGED TO 1 DUE TO GIPHY API LIMITS
-            for(i=0;i<1;i++) {
+            for(i=0;i<5;i++) {
                 //get data for the ith artist
                 let name = data.artists[i].name;
                 let blurb = data.artists[i].blurbs[0];
@@ -73,11 +73,11 @@ function getGif(name) {
     // .then((giphy) => {
     //     //gets URL for img tag
     //     console.log(giphy);
-    //     console.log(giphy.data[0].url)
+    //     console.log(giphy.data[0].url);
     //     return giphy.data[0].url;
     // })
 
-    return "https://giphy.com/gifs/Friends-friends-tv-the-one-where-rachel-tells-U23WekMlGy6cImpMim";
+    return "https://media2.giphy.com/media/U23WekMlGy6cImpMim/giphy.gif?cid=0a15940c15f3x16vjjgqtov3byb1mkfx1vfwumfoe1ogzp9m&rid=giphy.gif&ct=g";
 }
 
 
