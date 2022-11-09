@@ -9,9 +9,9 @@
 
 ## Description
 
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum est eveniet ducimus sit, saepe nam dolorum nemo aperiam ipsam dolorem asperiores molestias esse tenetur. Vero eligendi fugit voluptas ipsam nostrum.
+OUTLINE:   
 
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum est eveniet ducimus sit, saepe nam dolorum nemo aperiam ipsam dolorem asperiores molestias esse tenetur. Vero eligendi fugit voluptas ipsam nostrum.
+localStorage:  when users search for an artist the name is stored in localStorage.  When a user clicks the search input, a dropdown list appears and calls localStorage data to populate a list of previously searched artists.  If the user selects an item from the dropdown, the search will continue as normal.  
 
 Screenshot of deployeed application:
 ![Name](link)
@@ -25,9 +25,10 @@ github
 github pages
 github projects
 chrome devtools
-Google custom search API
-MusixMatch API
+Giphy API
+Napster API
 slack - team coordination
+zoom - remote pair programming
 
 ## License
 
