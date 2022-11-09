@@ -9,8 +9,6 @@ var cardGifCollection = document.querySelectorAll(".gif-content");
 
 button.addEventListener("click", getArtistID);
 
-state = 1
-
 //main function
 function getArtistID(e) {
     e.preventDefault();
@@ -28,19 +26,14 @@ function getArtistID(e) {
            return response.json();
         })
         .then(function(data) {
+            //set variable to name of first artist in search results
             var artistId = data.artists[0].id;
-            // for (i=0;i<3;i++) {
-                // document.querySelector('#header'+state).innerHTML = data.artists[0].name;
-            // }
-            // state++;
-            console.log(data);
+            //get similar artists using id
             similarArtists(artistId);
-            // topSongs(artistId);
-            // topAlbums(artistId);
         })
 }
 
-//spits out top 3(#based off (i<3)) similar artists
+//spits out top 5(#based off (i<5)) similar artists
 function similarArtists(artistId) {
     var requestURL = 'https://api.napster.com/v2.2/artists/'+artistId+'/similar?limit=5&apikey=Y2Q4NGE2MTMtMGI2Ni00ZGEwLWE3NWItNGFjMTMyYjg0NzYz'
     fetch(requestURL)
@@ -48,16 +41,20 @@ function similarArtists(artistId) {
             return response.json();
         })
         .then(function(data) {
+
+            //iterate through the first 5 similar artists
             for(i=0;i<5;i++) {
+                //get data for the ith artist
                 let name = data.artists[i].name;
                 let blurb = data.artists[i].blurbs[0];
+                //get a gif of the artist
                 let gifURL = "url('" + getGif(name) + "')";
-                //domHook.children[i].innerHTML = data.artists[i].name;
+                
+                //update ith card with ith artist info
                 cardHeaderCollection[i].textContent = name;
                 cardBlurbCollection[i].textContent = blurb;
                 cardGifCollection[i].style.backgroundImage = gifURL;
             }
-            console.log(data);
         })
 }
 
@@ -66,16 +63,8 @@ function similarArtists(artistId) {
 
 
 
-
-
-
-
-
-
-
-
-
-
+// sorry matt i can tell you worked really hard ont these and they work great and are beautiful
+// but since we're just using the name and blurb we dont actually need them i feel bad bro </3
 
 // //spits out top 3 albums & a src link for the top album art; Actively fills first three children based off state and 
 // function topAlbums(artistId) {
