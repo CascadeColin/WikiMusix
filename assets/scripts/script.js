@@ -57,6 +57,13 @@ function similarArtists(artistId) {
                 cardBlurbCollection[i].textContent = blurb;
                 cardGifCollection[i].style.backgroundImage = gifURL;
             }
+
+            // cardCollection.forEach(card => {
+            //     card.classList.remove("hide");
+            // })
+
+            // console.log(cardContainer.classList);
+            cardContainer.classList.remove("hide");
         })
 }
 
