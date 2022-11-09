@@ -10,7 +10,7 @@
 			href="https://fonts.googleapis.com/css?family=Dosis"
 		/>
 		<link rel="stylesheet" href="./assets/styles/reset.css" />
-		<!-- <link rel="stylesheet" href="./assets/styles/styles.css" /> -->
+		<link rel="stylesheet" href="./assets/styles/styles.css" />
 		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
 	<body class="bg-neutral-900">
@@ -20,834 +20,176 @@
 				><span style="color: #b4a0e5">Musix</span>
 			</h1>
 		</header>
-		<form class="flex w-full px-8 justify-center flex-wrap mb-20">
+		<form
+			class="artist-search-form flex w-full px-8 justify-center flex-wrap mb-20"
+		>
 			<input
 				type="text"
-				id="searchBar"
 				name="search-bar"
 				placeholder="Search any artist..."
-				class="pr-3 pl-5 py-2 mx-6 my-4 text-neutral-900 rounded-2xl border-none w-96 focus:outline-none"
+				class="search-bar pr-3 pl-5 py-2 mx-6 my-4 text-neutral-900 rounded-2xl border-none w-96 focus:outline-none"
 				style="background-color: #fffcef"
 			/>
 			<button
-				id="button"
-				class="bg-red-900 px-6 rounded-2xl mx-6 my-4 h-10"
 				style="color: #fffcef"
 			>
 				Search
 			</button>
 		</form>
 		<div
-			id="cardContainer"
-			class="flex flex-wrap lg:w-3/4 md:w-3/4 sm:w-4/5 mx-auto justify-center"
+			class="card-container flex flex-wrap lg:w-3/4 md:w-3/4 sm:w-4/5 mx-auto justify-center"
 		>
 			<section
-				id="songCard"
-				class="flex flex-col w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
 			>
 				<header
-					id='header1'
-					class="block rounded-t-xl w-full px-5 py-3 text-3xl"
+					class="artist-name block rounded-t-xl w-full px-5 py-3 text-3xl"
 					style="background-color: #b4a0e5"
 				>
-					Oliver Tree
+					Drake
 				</header>
 				<div
-					id="cardCenterFlex"
-					class="flex mt-5 justify-around"
-					style="color: #fffcef"
+					class="song-card-inner-flex flex flex-col justify-between h-full"
 				>
-					<section id="rating">
-						<p class="text-xl">Rating:</p>
-						<p
-							class="text-3xl text-center mt-5"
-							style="color: #fffcef"
-						>
-							91<span style="color: #fffcef">%</span>
+					<div class="card-center mt-5 mx-4" style="color: #fffcef">
+						<p class="blurb">
+							Aubrey Drake Graham is a biracial, half-Canadian,
+							half-American artist that blends hip-hop street
+							smarts and lush emo R&B.
 						</p>
-					</section>
-					<ol
-						id="songList1"
-						id="songList"
-						class="text-xl list-decimal"
-						style="max-width: 135px; color: #fffcef"
-					>
-						Top songs:
-						<li id="song" class="text-2xl">Miss You</li>
-						<li id="song" class="text-2xl">Sick Of U</li>
-						<li id="song" class="text-2xl">Life Goes On</li>
-					</ol>
-				</div>
-				<div id="customSearch">
-					<form
-						id="customSearchForm"
-						class="flex w-full mb-5 mt-6 justify-around"
-					>
-						<div id="checklistContainer" style="color: #fffcef">
-							<input
-								type="checkbox"
-								id="concerts"
-								name="concerts"
-								value="Concerts"
-							/>
-							<label for="concerts">Concerts</label><br />
-							<input
-								type="checkbox"
-								id="merch"
-								name="merch"
-								value="Merch"
-							/>
-							<label for="merch">Merch</label><br />
-							<input
-								type="checkbox"
-								id="collabs"
-								name="collabs"
-								value="Collabs"
-							/>
-							<label for="collabs">Collabs</label><br />
-							<input
-								type="checkbox"
-								id="socials"
-								name="socials"
-								value="Collabs"
-							/>
-							<label for="socials">Socials</label>
-						</div>
-						<input
-							type="submit"
-							id="customSearchBtn"
-							value="Search"
-							class="bg-red-900 px-6 rounded-2xl h-10 my-auto cursor-pointer"
-							style="color: #fffcef"
-						/>
-					</form>
+					</div>
+					<div
+						class="gif-content mx-auto my-5"
+						style="
+							background-image: url('https://media.giphy.com/media/7WvAUvZZTRpSuudobh/giphy.gif');
+							background-size: contain;
+							height: 200px;
+							width: 200px;
+						"
+					></div>
 				</div>
 			</section>
 			<section
-				id="songCard"
-				class="flex flex-col w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
+				class="song-card flex flex-col h-fit w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
 			>
 				<header
-					id="header2"
-					class="block rounded-t-xl w-full px-5 py-3 text-3xl"
+					class="artist-name block rounded-t-xl w-full px-5 py-3 text-3xl"
 					style="background-color: #b4a0e5"
 				>
-					Oliver Tree
+					Drake
 				</header>
 				<div
-					id="cardCenterFlex"
-					class="flex mt-5 justify-around"
-					style="color: #fffcef"
+					class="song-card-inner-flex flex flex-col justify-between h-full"
 				>
-					<section id="rating">
-						<p class="text-xl">Rating:</p>
-						<p
-							class="text-3xl text-center mt-5"
-							style="color: #fffcef"
-						>
-							91<span style="color: #fffcef">%</span>
+					<div class="card-center mt-5 mx-4" style="color: #fffcef">
+						<p class="blurb">
+							Aubrey Drake Graham is a biracial, half-Canadian,
+							half-American artist that blends hip-hop street
+							smarts and lush emo R&B.
 						</p>
-					</section>
-					<ol
-						id="songList2"
-						id="songList"
-						class="text-xl list-decimal"
-						style="max-width: 135px; color: #fffcef"
-					>
-						Top songs:
-						<li id="song" class="text-2xl">Miss You</li>
-						<li id="song" class="text-2xl">Sick Of U</li>
-						<li id="song" class="text-2xl">Life Goes On</li>
-					</ol>
-				</div>
-				<div id="customSearch">
-					<form
-						id="customSearchForm"
-						class="flex w-full mb-5 mt-6 justify-around"
-					>
-						<div id="checklistContainer" style="color: #fffcef">
-							<input
-								type="checkbox"
-								id="concerts"
-								name="concerts"
-								value="Concerts"
-							/>
-							<label for="concerts">Concerts</label><br />
-							<input
-								type="checkbox"
-								id="merch"
-								name="merch"
-								value="Merch"
-							/>
-							<label for="merch">Merch</label><br />
-							<input
-								type="checkbox"
-								id="collabs"
-								name="collabs"
-								value="Collabs"
-							/>
-							<label for="collabs">Collabs</label><br />
-							<input
-								type="checkbox"
-								id="socials"
-								name="socials"
-								value="Collabs"
-							/>
-							<label for="socials">Socials</label>
-						</div>
-						<input
-							type="submit"
-							id="customSearchBtn"
-							value="Search"
-							class="bg-red-900 px-6 rounded-2xl h-10 my-auto cursor-pointer"
-							style="color: #fffcef"
-						/>
-					</form>
+					</div>
+					<div
+						class="gif-content mx-auto my-5"
+						style="
+							background-image: url('https://media.giphy.com/media/7WvAUvZZTRpSuudobh/giphy.gif');
+							background-size: contain;
+							height: 200px;
+							width: 200px;
+						"
+					></div>
 				</div>
 			</section>
 			<section
-				id="songCard"
-				class="flex flex-col w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
+				class="song-card flex flex-col h-fit w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
 			>
 				<header
-					id="header3"
-					class="block rounded-t-xl w-full px-5 py-3 text-3xl"
+					class="artist-name block rounded-t-xl w-full px-5 py-3 text-3xl"
 					style="background-color: #b4a0e5"
 				>
-					Oliver Tree
+					Drake
 				</header>
 				<div
-					id="cardCenterFlex"
-					class="flex mt-5 justify-around"
-					style="color: #fffcef"
+					class="song-card-inner-flex flex flex-col justify-between h-full"
 				>
-					<section id="rating">
-						<p class="text-xl">Rating:</p>
-						<p
-							class="text-3xl text-center mt-5"
-							style="color: #fffcef"
-						>
-							91<span style="color: #fffcef">%</span>
+					<div class="card-center mt-5 mx-4" style="color: #fffcef">
+						<p class="blurb">
+							Aubrey Drake Graham is a biracial, half-Canadian,
+							half-American artist that blends hip-hop street
+							smarts and lush emo R&B.
 						</p>
-					</section>
-					<ol
-						id="songList3"
-						id="songList"
-						class="text-xl list-decimal"
-						style="max-width: 135px; color: #fffcef"
-					>
-						Top songs:
-						<li id="song" class="text-2xl">Miss You</li>
-						<li id="song" class="text-2xl">Sick Of U</li>
-						<li id="song" class="text-2xl">Life Goes On</li>
-					</ol>
-				</div>
-				<div id="customSearch">
-					<form
-						id="customSearchForm"
-						class="flex w-full mb-5 mt-6 justify-around"
-					>
-						<div id="checklistContainer" style="color: #fffcef">
-							<input
-								type="checkbox"
-								id="concerts"
-								name="concerts"
-								value="Concerts"
-							/>
-							<label for="concerts">Concerts</label><br />
-							<input
-								type="checkbox"
-								id="merch"
-								name="merch"
-								value="Merch"
-							/>
-							<label for="merch">Merch</label><br />
-							<input
-								type="checkbox"
-								id="collabs"
-								name="collabs"
-								value="Collabs"
-							/>
-							<label for="collabs">Collabs</label><br />
-							<input
-								type="checkbox"
-								id="socials"
-								name="socials"
-								value="Collabs"
-							/>
-							<label for="socials">Socials</label>
-						</div>
-						<input
-							type="submit"
-							id="customSearchBtn"
-							value="Search"
-							class="bg-red-900 px-6 rounded-2xl h-10 my-auto cursor-pointer"
-							style="color: #fffcef"
-						/>
-					</form>
+					</div>
+					<div
+						class="gif-content mx-auto my-5"
+						style="
+							background-image: url('https://media.giphy.com/media/7WvAUvZZTRpSuudobh/giphy.gif');
+							background-size: contain;
+							height: 200px;
+							width: 200px;
+						"
+					></div>
 				</div>
 			</section>
 			<section
-				id="songCard"
-				class="flex flex-col w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
+				class="song-card flex flex-col h-fit w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
 			>
 				<header
-					class="block rounded-t-xl w-full px-5 py-3 text-3xl"
+					class="artist-name block rounded-t-xl w-full px-5 py-3 text-3xl"
 					style="background-color: #b4a0e5"
 				>
-					Oliver Tree
+					Drake
 				</header>
 				<div
-					id="cardCenterFlex"
-					class="flex mt-5 justify-around"
-					style="color: #fffcef"
+					class="song-card-inner-flex flex flex-col justify-between h-full"
 				>
-					<section id="rating">
-						<p class="text-xl">Rating:</p>
-						<p
-							class="text-3xl text-center mt-5"
-							style="color: #fffcef"
-						>
-							91<span style="color: #fffcef">%</span>
+					<div class="card-center mt-5 mx-4" style="color: #fffcef">
+						<p class="blurb">
+							Aubrey Drake Graham is a biracial, half-Canadian,
+							half-American artist that blends hip-hop street
+							smarts and lush emo R&B.
 						</p>
-					</section>
-					<ol
-						id="songList"
-						class="text-xl list-decimal"
-						style="max-width: 135px; color: #fffcef"
-					>
-						Top songs:
-						<li id="song" class="text-2xl">Miss You</li>
-						<li id="song" class="text-2xl">Sick Of U</li>
-						<li id="song" class="text-2xl">Life Goes On</li>
-					</ol>
-				</div>
-				<div id="customSearch">
-					<form
-						id="customSearchForm"
-						class="flex w-full mb-5 mt-6 justify-around"
-					>
-						<div id="checklistContainer" style="color: #fffcef">
-							<input
-								type="checkbox"
-								id="concerts"
-								name="concerts"
-								value="Concerts"
-							/>
-							<label for="concerts">Concerts</label><br />
-							<input
-								type="checkbox"
-								id="merch"
-								name="merch"
-								value="Merch"
-							/>
-							<label for="merch">Merch</label><br />
-							<input
-								type="checkbox"
-								id="collabs"
-								name="collabs"
-								value="Collabs"
-							/>
-							<label for="collabs">Collabs</label><br />
-							<input
-								type="checkbox"
-								id="socials"
-								name="socials"
-								value="Collabs"
-							/>
-							<label for="socials">Socials</label>
-						</div>
-						<input
-							type="submit"
-							id="customSearchBtn"
-							value="Search"
-							class="bg-red-900 px-6 rounded-2xl h-10 my-auto cursor-pointer"
-							style="color: #fffcef"
-						/>
-					</form>
+					</div>
+					<div
+						class="gif-content mx-auto my-5"
+						style="
+							background-image: url('https://media.giphy.com/media/7WvAUvZZTRpSuudobh/giphy.gif');
+							background-size: contain;
+							height: 200px;
+							width: 200px;
+						"
+					></div>
 				</div>
 			</section>
 			<section
-				id="songCard"
-				class="flex flex-col w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
+				class="song-card flex flex-col h-fit w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
 			>
 				<header
-					class="block rounded-t-xl w-full px-5 py-3 text-3xl"
+					class="artist-name block rounded-t-xl w-full px-5 py-3 text-3xl"
 					style="background-color: #b4a0e5"
 				>
-					Oliver Tree
+					Drake
 				</header>
 				<div
-					id="cardCenterFlex"
-					class="flex mt-5 justify-around"
-					style="color: #fffcef"
+					class="song-card-inner-flex flex flex-col justify-between h-full"
 				>
-					<section id="rating">
-						<p class="text-xl">Rating:</p>
-						<p
-							class="text-3xl text-center mt-5"
-							style="color: #fffcef"
-						>
-							91<span style="color: #fffcef">%</span>
+					<div class="card-center mt-5 mx-4" style="color: #fffcef">
+						<p class="blurb">
+							Aubrey Drake Graham is a biracial, half-Canadian,
+							half-American artist that blends hip-hop street
+							smarts and lush emo R&B.
 						</p>
-					</section>
-					<ol
-						id="songList"
-						class="text-xl list-decimal"
-						style="max-width: 135px; color: #fffcef"
-					>
-						Top songs:
-						<li id="song" class="text-2xl">Miss You</li>
-						<li id="song" class="text-2xl">Sick Of U</li>
-						<li id="song" class="text-2xl">Life Goes On</li>
-					</ol>
-				</div>
-				<div id="customSearch">
-					<form
-						id="customSearchForm"
-						class="flex w-full mb-5 mt-6 justify-around"
-					>
-						<div id="checklistContainer" style="color: #fffcef">
-							<input
-								type="checkbox"
-								id="concerts"
-								name="concerts"
-								value="Concerts"
-							/>
-							<label for="concerts">Concerts</label><br />
-							<input
-								type="checkbox"
-								id="merch"
-								name="merch"
-								value="Merch"
-							/>
-							<label for="merch">Merch</label><br />
-							<input
-								type="checkbox"
-								id="collabs"
-								name="collabs"
-								value="Collabs"
-							/>
-							<label for="collabs">Collabs</label><br />
-							<input
-								type="checkbox"
-								id="socials"
-								name="socials"
-								value="Collabs"
-							/>
-							<label for="socials">Socials</label>
-						</div>
-						<input
-							type="submit"
-							id="customSearchBtn"
-							value="Search"
-							class="bg-red-900 px-6 rounded-2xl h-10 my-auto cursor-pointer"
-							style="color: #fffcef"
-						/>
-					</form>
-				</div>
-			</section>
-			<section
-				id="songCard"
-				class="flex flex-col w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
-			>
-				<header
-					class="block rounded-t-xl w-full px-5 py-3 text-3xl"
-					style="background-color: #b4a0e5"
-				>
-					Oliver Tree
-				</header>
-				<div
-					id="cardCenterFlex"
-					class="flex mt-5 justify-around"
-					style="color: #fffcef"
-				>
-					<section id="rating">
-						<p class="text-xl">Rating:</p>
-						<p
-							class="text-3xl text-center mt-5"
-							style="color: #fffcef"
-						>
-							91<span style="color: #fffcef">%</span>
-						</p>
-					</section>
-					<ol
-						id="songList"
-						class="text-xl list-decimal"
-						style="max-width: 135px; color: #fffcef"
-					>
-						Top songs:
-						<li id="song" class="text-2xl">Miss You</li>
-						<li id="song" class="text-2xl">Sick Of U</li>
-						<li id="song" class="text-2xl">Life Goes On</li>
-					</ol>
-				</div>
-				<div id="customSearch">
-					<form
-						id="customSearchForm"
-						class="flex w-full mb-5 mt-6 justify-around"
-					>
-						<div id="checklistContainer" style="color: #fffcef">
-							<input
-								type="checkbox"
-								id="concerts"
-								name="concerts"
-								value="Concerts"
-							/>
-							<label for="concerts">Concerts</label><br />
-							<input
-								type="checkbox"
-								id="merch"
-								name="merch"
-								value="Merch"
-							/>
-							<label for="merch">Merch</label><br />
-							<input
-								type="checkbox"
-								id="collabs"
-								name="collabs"
-								value="Collabs"
-							/>
-							<label for="collabs">Collabs</label><br />
-							<input
-								type="checkbox"
-								id="socials"
-								name="socials"
-								value="Collabs"
-							/>
-							<label for="socials">Socials</label>
-						</div>
-						<input
-							type="submit"
-							id="customSearchBtn"
-							value="Search"
-							class="bg-red-900 px-6 rounded-2xl h-10 my-auto cursor-pointer"
-							style="color: #fffcef"
-						/>
-					</form>
-				</div>
-			</section>
-			<section
-				id="songCard"
-				class="flex flex-col w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
-			>
-				<header
-					class="block rounded-t-xl w-full px-5 py-3 text-3xl"
-					style="background-color: #b4a0e5"
-				>
-					Oliver Tree
-				</header>
-				<div
-					id="cardCenterFlex"
-					class="flex mt-5 justify-around"
-					style="color: #fffcef"
-				>
-					<section id="rating">
-						<p class="text-xl">Rating:</p>
-						<p
-							class="text-3xl text-center mt-5"
-							style="color: #fffcef"
-						>
-							91<span style="color: #fffcef">%</span>
-						</p>
-					</section>
-					<ol
-						id="songList"
-						class="text-xl list-decimal"
-						style="max-width: 135px; color: #fffcef"
-					>
-						Top songs:
-						<li id="song" class="text-2xl">Miss You</li>
-						<li id="song" class="text-2xl">Sick Of U</li>
-						<li id="song" class="text-2xl">Life Goes On</li>
-					</ol>
-				</div>
-				<div id="customSearch">
-					<form
-						id="customSearchForm"
-						class="flex w-full mb-5 mt-6 justify-around"
-					>
-						<div id="checklistContainer" style="color: #fffcef">
-							<input
-								type="checkbox"
-								id="concerts"
-								name="concerts"
-								value="Concerts"
-							/>
-							<label for="concerts">Concerts</label><br />
-							<input
-								type="checkbox"
-								id="merch"
-								name="merch"
-								value="Merch"
-							/>
-							<label for="merch">Merch</label><br />
-							<input
-								type="checkbox"
-								id="collabs"
-								name="collabs"
-								value="Collabs"
-							/>
-							<label for="collabs">Collabs</label><br />
-							<input
-								type="checkbox"
-								id="socials"
-								name="socials"
-								value="Collabs"
-							/>
-							<label for="socials">Socials</label>
-						</div>
-						<input
-							type="submit"
-							id="customSearchBtn"
-							value="Search"
-							class="bg-red-900 px-6 rounded-2xl h-10 my-auto cursor-pointer"
-							style="color: #fffcef"
-						/>
-					</form>
-				</div>
-			</section>
-			<section
-				id="songCard"
-				class="flex flex-col w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
-			>
-				<header
-					class="block rounded-t-xl w-full px-5 py-3 text-3xl"
-					style="background-color: #b4a0e5"
-				>
-					Oliver Tree
-				</header>
-				<div
-					id="cardCenterFlex"
-					class="flex mt-5 justify-around"
-					style="color: #fffcef"
-				>
-					<section id="rating">
-						<p class="text-xl">Rating:</p>
-						<p
-							class="text-3xl text-center mt-5"
-							style="color: #fffcef"
-						>
-							91<span style="color: #fffcef">%</span>
-						</p>
-					</section>
-					<ol
-						id="songList"
-						class="text-xl list-decimal"
-						style="max-width: 135px; color: #fffcef"
-					>
-						Top songs:
-						<li id="song" class="text-2xl">Miss You</li>
-						<li id="song" class="text-2xl">Sick Of U</li>
-						<li id="song" class="text-2xl">Life Goes On</li>
-					</ol>
-				</div>
-				<div id="customSearch">
-					<form
-						id="customSearchForm"
-						class="flex w-full mb-5 mt-6 justify-around"
-					>
-						<div id="checklistContainer" style="color: #fffcef">
-							<input
-								type="checkbox"
-								id="concerts"
-								name="concerts"
-								value="Concerts"
-							/>
-							<label for="concerts">Concerts</label><br />
-							<input
-								type="checkbox"
-								id="merch"
-								name="merch"
-								value="Merch"
-							/>
-							<label for="merch">Merch</label><br />
-							<input
-								type="checkbox"
-								id="collabs"
-								name="collabs"
-								value="Collabs"
-							/>
-							<label for="collabs">Collabs</label><br />
-							<input
-								type="checkbox"
-								id="socials"
-								name="socials"
-								value="Collabs"
-							/>
-							<label for="socials">Socials</label>
-						</div>
-						<input
-							type="submit"
-							id="customSearchBtn"
-							value="Search"
-							class="bg-red-900 px-6 rounded-2xl h-10 my-auto cursor-pointer"
-							style="color: #fffcef"
-						/>
-					</form>
-				</div>
-			</section>
-			<section
-				id="songCard"
-				class="flex flex-col w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
-			>
-				<header
-					class="block rounded-t-xl w-full px-5 py-3 text-3xl"
-					style="background-color: #b4a0e5"
-				>
-					Oliver Tree
-				</header>
-				<div
-					id="cardCenterFlex"
-					class="flex mt-5 justify-around"
-					style="color: #fffcef"
-				>
-					<section id="rating">
-						<p class="text-xl">Rating:</p>
-						<p
-							class="text-3xl text-center mt-5"
-							style="color: #fffcef"
-						>
-							91<span style="color: #fffcef">%</span>
-						</p>
-					</section>
-					<ol
-						id="songList"
-						class="text-xl list-decimal"
-						style="max-width: 135px; color: #fffcef"
-					>
-						Top songs:
-						<li id="song" class="text-2xl">Miss You</li>
-						<li id="song" class="text-2xl">Sick Of U</li>
-						<li id="song" class="text-2xl">Life Goes On</li>
-					</ol>
-				</div>
-				<div id="customSearch">
-					<form
-						id="customSearchForm"
-						class="flex w-full mb-5 mt-6 justify-around"
-					>
-						<div id="checklistContainer" style="color: #fffcef">
-							<input
-								type="checkbox"
-								id="concerts"
-								name="concerts"
-								value="Concerts"
-							/>
-							<label for="concerts">Concerts</label><br />
-							<input
-								type="checkbox"
-								id="merch"
-								name="merch"
-								value="Merch"
-							/>
-							<label for="merch">Merch</label><br />
-							<input
-								type="checkbox"
-								id="collabs"
-								name="collabs"
-								value="Collabs"
-							/>
-							<label for="collabs">Collabs</label><br />
-							<input
-								type="checkbox"
-								id="socials"
-								name="socials"
-								value="Collabs"
-							/>
-							<label for="socials">Socials</label>
-						</div>
-						<input
-							type="submit"
-							id="customSearchBtn"
-							value="Search"
-							class="bg-red-900 px-6 rounded-2xl h-10 my-auto cursor-pointer"
-							style="color: #fffcef"
-						/>
-					</form>
-				</div>
-			</section>
-			<section
-				id="songCard"
-				class="flex flex-col w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
-			>
-				<header
-					class="block rounded-t-xl w-full px-5 py-3 text-3xl"
-					style="background-color: #b4a0e5"
-				>
-					Oliver Tree
-				</header>
-				<div
-					id="cardCenterFlex"
-					class="flex mt-5 justify-around"
-					style="color: #fffcef"
-				>
-					<section id="rating">
-						<p class="text-xl">Rating:</p>
-						<p
-							class="text-3xl text-center mt-5"
-							style="color: #fffcef"
-						>
-							91<span style="color: #fffcef">%</span>
-						</p>
-					</section>
-					<ol
-						id="songList"
-						class="text-xl list-decimal"
-						style="max-width: 135px; color: #fffcef"
-					>
-						Top songs:
-						<li id="song" class="text-2xl">Miss You</li>
-						<li id="song" class="text-2xl">Sick Of U</li>
-						<li id="song" class="text-2xl">Life Goes On</li>
-					</ol>
-				</div>
-				<div id="customSearch">
-					<form
-						id="customSearchForm"
-						class="flex w-full mb-5 mt-6 justify-around"
-					>
-						<div id="checklistContainer" style="color: #fffcef">
-							<input
-								type="checkbox"
-								id="concerts"
-								name="concerts"
-								value="Concerts"
-							/>
-							<label for="concerts">Concerts</label><br />
-							<input
-								type="checkbox"
-								id="merch"
-								name="merch"
-								value="Merch"
-							/>
-							<label for="merch">Merch</label><br />
-							<input
-								type="checkbox"
-								id="collabs"
-								name="collabs"
-								value="Collabs"
-							/>
-							<label for="collabs">Collabs</label><br />
-							<input
-								type="checkbox"
-								id="socials"
-								name="socials"
-								value="Collabs"
-							/>
-							<label for="socials">Socials</label>
-						</div>
-						<input
-							type="submit"
-							id="customSearchBtn"
-							value="Search"
-							class="bg-red-900 px-6 rounded-2xl h-10 my-auto cursor-pointer"
-							style="color: #fffcef"
-						/>
-					</form>
+					</div>
+					<div
+						class="gif-content mx-auto my-5"
+						style="
+							background-image: url('https://media.giphy.com/media/7WvAUvZZTRpSuudobh/giphy.gif');
+							background-size: contain;
+							height: 200px;
+							width: 200px;
+						"
+					></div>
 				</div>
 			</section>
 		</div>
+		<script src="./assets/scripts/dom-hook-draft.js"></script>
 	</body>
 	<script src="./assets/scripts/script.js"></script>
 </html>
