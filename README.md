@@ -18,17 +18,11 @@ Screenshot of deployeed application:
 
 ## Technology
 
-Our team utilized....
-vscode
-git
-github
-github pages
-github projects
-chrome devtools
-Giphy API
-Napster API
-slack - team coordination
-zoom - remote pair programming
+Team coordination and planning was achieved using Github, Slack, and Zoom.  Github was utilized primarily for version control.  However, we also used Github Projects to create a kanban board.  This allowed us to know the overall project's status at any given time, and also update it in real time.  Github Pages was also our method of deploying our completed website.
+
+For APIs, we chose to utilize Napster and Giphy after an extensive search.  Unfortunately, we had to change our project plans more than once due to technical limititations.  Ultimately, we decided to use Napster API as a database for musical information.  Using a custom search feature, we created a music search engine based upon the data contained in Napster API.  Everyone enjoys memes, so we decided to utilize Giphy API as a way to give users a meme for each artist that they search.  The functionality is implemented in a similar manner to the Napster API but is called in a different fetch request.  We also restricted the GIFs by rating to G or PG, as we do not want to host obscene content on our website.
+
+We chose to use Tailwind as our CSS framework.  This is a framework that is growing in popularity and is thus going to be useful to know in the future.  Using Tailwind allowed us to quickly style containers and cards on our website so that we could focus on the beefier parts of the project.  We also incorporated the font Dosis from Google Fonts.  This was chosen because it is a nice blend of readability mixed with artistic flair, while also being somewhat minimalist.
 
 ## License
 
