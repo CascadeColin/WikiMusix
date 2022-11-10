@@ -1,5 +1,6 @@
 var searchBar = document.querySelector('.search-bar');
 var button = document.querySelector('.artist-search-btn');
+var historyDropdownEl = document.querySelector(".history-dropdown");
 
 var cardContainer = document.querySelector(".card-container");
 var cardCollection = document.querySelectorAll(".song-card");
@@ -12,6 +13,11 @@ button.addEventListener("click", getArtistID);
 //main function
 function getArtistID(e) {
     e.preventDefault();
+    
+    //reset animation and placeholder text in case last search failed
+    button.style.animation = "";
+    searchBar.setAttribute("placeholder", "Search any artist...");
+    historyDropdownEl.classList.remove("show-dd");
 
     //format user input for api call
     userInput = searchBar.value.toLowerCase();
@@ -21,15 +27,33 @@ function getArtistID(e) {
     var requestURL = 'https://api.napster.com/v2.2/artists/'+userInput+'?&apikey=Y2Q4NGE2MTMtMGI2Ni00ZGEwLWE3NWItNGFjMTMyYjg0NzYz'
 
     //call API
-    fetch(requestURL) 
-        .then(function (response) {
-           return response.json();
-        })
-        .then(function(data) {
+    fetch(requestURL).then((response) => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            return Promise.reject({
+                status: response.status,
+                statusText: response.statusText
+            });
+        }
+        }).then(function(data) {
+
+            if (data.artists.length < 1) {
+                artistNotFound();
+                return;
+            }
+
+            addToSearchHistory(data.artists[0].name);
             //set variable to name of first artist in search results
             var artistId = data.artists[0].id;
             //get similar artists using id
             similarArtists(artistId);
+        }).catch(error => {
+            searchBar.value = "";
+            if (error.status === 400) {
+                searchBar.setAttribute("placeholder", "No input, try again...");
+            }
+            button.style.animation = "btn-invalid 0.5s ease-out 1";
         })
 }
 
@@ -41,6 +65,13 @@ function similarArtists(artistId) {
             return response.json();
         })
         .then(function(data) {
+
+            console.log(data);
+
+            if (data.artists.length < 5) {
+                artistNotFound();
+                return;                
+            }
 
             //iterate through the first 5 similar artists
             // CHANGED TO 1 DUE TO GIPHY API LIMITS
@@ -58,15 +89,17 @@ function similarArtists(artistId) {
                 cardGifCollection[i].style.backgroundImage = gifURL;
             }
 
-            // cardCollection.forEach(card => {
-            //     card.classList.remove("hide");
-            // })
-
-            // console.log(cardContainer.classList);
+            // show all cards and remove text from search bar
             cardContainer.classList.remove("hide");
+            searchBar.value = "";
         })
 }
 
+function artistNotFound() {
+    searchBar.value = "";
+    searchBar.setAttribute("placeholder", "Not found in database, try again...");
+    button.style.animation = "btn-invalid 0.5s ease-out 1";
+}
 
 
 function getGif(name) { 

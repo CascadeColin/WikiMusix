@@ -1,5 +1,11 @@
+.search-bar-dropdown-container {
+    position: relative;
+}
+
 .search-bar {
     background-color: #fffcef;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .artist-search-btn {
@@ -11,6 +17,30 @@
 .artist-search-btn:hover {
     background-color: #a33c3c;
     transition: 0.1s ease;
+}
+
+/* positions dropdown directly beneath search bar */
+.history-dropdown {
+    display: none;
+    position: absolute;
+    margin: 0 auto;
+    background-color: #fffcefc2;
+    top: 3.5rem;
+    left: 1.5rem;
+    padding: 10px;
+    border-radius: 1rem;
+}
+
+.history-dropdown li {
+    color: #752c2c;
+    padding: 3px 0px 3px 10px;
+}
+
+/* helps user know these are links */
+.history-dropdown li:hover {
+    text-decoration: underline;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .card-container {
@@ -37,8 +67,20 @@
     display: none;
 }
 
+/* to show dropdown */
+.show-dd {
+    display: inline-block;
+}
+
+@media screen and (max-width: 633px) {
+    .search-bar {
+        margin-bottom: 8rem;
+    }
+}
+
 @keyframes btn-invalid {
     0% {
+        background-color: #fffcefc7;
         transform: translate3d(0, 0, 0);
     }
 
@@ -60,5 +102,6 @@
 
     100% {
         transform: translate3d(0, 0, 0);
+        background-color: #a33c3c;
     }
 }
