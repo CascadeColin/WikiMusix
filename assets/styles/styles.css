@@ -1,9 +1,14 @@
+.site-title {
+    margin-top: 20rem;
+}
+
 .search-bar-dropdown-container {
     position: relative;
 }
 
 .search-bar {
     background-color: #fffcef;
+    width: 24rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -23,6 +28,7 @@
 .history-dropdown {
     display: none;
     position: absolute;
+    width: 24rem;
     margin: 0 auto;
     background-color: #fffcefc2;
     top: 3.5rem;
@@ -72,8 +78,17 @@
 }
 
 @media screen and (max-width: 633px) {
+
+    .site-title {
+        margin-top: 10rem;
+    }
+
     .search-bar {
+        width: 80vw;
         margin-bottom: 8rem;
+    }
+    .history-dropdown {
+        width: 80vw;
     }
 }
 
