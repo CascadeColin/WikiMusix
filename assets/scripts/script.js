@@ -60,11 +60,12 @@ function getArtistID(e) {
 //spits out top 5(#based off (i<5)) similar artists
 function similarArtists(artistId) {
     var requestURL = 'https://api.napster.com/v2.2/artists/'+artistId+'/similar?limit=5&apikey=Y2Q4NGE2MTMtMGI2Ni00ZGEwLWE3NWItNGFjMTMyYjg0NzYz'
+
     fetch(requestURL)
         .then(function(response) {
             return response.json();
         })
-        .then(function(data) {
+        .then(async function(data) {
 
             console.log(data);
 
@@ -75,23 +76,33 @@ function similarArtists(artistId) {
 
             //iterate through the first 5 similar artists
             // CHANGED TO 1 DUE TO GIPHY API LIMITS
-            for(i=0;i<1;i++) {
+            for(i=0;i<5;i++) {
                 //get data for the ith artist
                 let name = data.artists[i].name;
                 let blurb = data.artists[i].blurbs[0];
                 let gifQueryInput = name.toLowerCase().replaceAll(' ','-');
-                //get a gif of the artist
-                let gifURL = "url('" + getGif(gifQueryInput) + "')";
+
+                // var response = await fetch('https://api.giphy.com/v1/gifs/search?q=' + gifQueryInput + '&api_key=k7ib5hd5qzn7oJfBjJsdPcK1mCKE1mZm&limit=1&rating=pg')
                 
+                // var gifJSON = await response.json();
+
+                // //gets URL for img tag
+                // console.log(gifJSON);
+                // let gifURL = gifJSON.data[0].images.downsized_large.url;
+                // console.log(gifURL);
+
                 //update ith card with ith artist info
                 cardHeaderCollection[i].textContent = name;
                 cardBlurbCollection[i].textContent = blurb;
-                cardGifCollection[i].style.backgroundImage = gifURL;
+                // cardGifCollection[i].style.backgroundImage = "url('" + gifURL + "')";
+                cardGifCollection[i].style.backgroundImage = "url('https://media3.giphy.com/media/LmC8GSARPDatSC6J8X/giphy.gif?cid=0a15940cui9389ix24h8ns15siltc6l93uprqdd2fzzagq2g&rid=giphy.gif&ct=g')";
+
             }
 
             // show all cards and remove text from search bar
             cardContainer.classList.remove("hide");
             searchBar.value = "";
+
         })
 }
 
@@ -100,30 +111,6 @@ function artistNotFound() {
     searchBar.setAttribute("placeholder", "Not found in database, try again...");
     button.style.animation = "btn-invalid 0.5s ease-out 1";
 }
-
-
-function getGif(name) { 
-
-    let query = 'https://api.giphy.com/v1/gifs/search?q=' + name + '&api_key=k7ib5hd5qzn7oJfBjJsdPcK1mCKE1mZm&limit=1&rating=pg';
-
-    fetch(query)
-    .then((response) => {
-        return response.json();
-    })
-    .then((giphy) => {
-        //gets URL for img tag
-        console.log(giphy);
-        var url = giphy.data[0].images.downsized_large.url;
-        console.log(url);
-        return url;
-    })
-
-    // return "https://media2.giphy.com/media/U23WekMlGy6cImpMim/giphy.gif?cid=0a15940c15f3x16vjjgqtov3byb1mkfx1vfwumfoe1ogzp9m&rid=giphy.gif&ct=g";
-}
-
-
-
-
 
 // sorry matt i can tell you worked really hard ont these and they work great and are beautiful
 // but since we're just using the name and blurb we dont actually need them i feel bad bro </3
