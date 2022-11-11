@@ -1,0 +1,121 @@
+.site-title {
+    margin-top: 20rem;
+}
+
+.search-bar-dropdown-container {
+    position: relative;
+}
+
+.search-bar {
+    background-color: #fffcef;
+    width: 24rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.artist-search-btn {
+    color: #fffcef;
+    background-color: #a33c3c;
+    transition: 0.1s ease;
+}
+
+.artist-search-btn:hover {
+    background-color: #a33c3c;
+    transition: 0.1s ease;
+}
+
+/* positions dropdown directly beneath search bar */
+.history-dropdown {
+    display: none;
+    position: absolute;
+    width: 24rem;
+    margin: 0 auto;
+    background-color: #fffcefc2;
+    top: 3.5rem;
+    left: 1.5rem;
+    padding: 10px;
+    border-radius: 1rem;
+}
+
+.history-dropdown li {
+    color: #752c2c;
+    padding: 3px 0px 3px 10px;
+}
+
+/* helps user know these are links */
+.history-dropdown li:hover {
+    text-decoration: underline;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.card-container {
+    display: flex;
+}
+
+.artist-name {
+    background-color: #b4a0e5;
+}
+
+.card-center {
+    color: #fffcef;
+}
+
+.gif-content {
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+}
+
+.hide {
+    display: none;
+}
+
+/* to show dropdown */
+.show-dd {
+    display: inline-block;
+}
+
+@media screen and (max-width: 633px) {
+
+    .site-title {
+        margin-top: 10rem;
+    }
+
+    .search-bar {
+        width: 80vw;
+        margin-bottom: 8rem;
+    }
+    .history-dropdown {
+        width: 80vw;
+    }
+}
+
+@keyframes btn-invalid {
+    0% {
+        background-color: #fffcefc7;
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(1px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-2px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        background-color: #a33c3c;
+    }
+}

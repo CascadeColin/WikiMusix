@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WikiMusix Music Search</title>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Dosis"
+		/>
+		<link rel="stylesheet" href="./assets/styles/reset.css" />
+		<link rel="stylesheet" href="./assets/styles/styles.css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="bg-neutral-900">
+		<header class="site-title">
+			<h1 class="w-96 text-center mx-auto mb-8 text-8xl text-neutral-100">
+				<span style="color: #fffcef">wiki</span
+				><span style="color: #b4a0e5">Musix</span>
+			</h1>
+		</header>
+		<form
+			class="artist-search-form flex w-full justify-center flex-wrap mb-20"
+		>
+			<div class="search-bar-dropdown-container">
+				<input
+					type="text"
+					name="search-bar"
+					placeholder="Search any artist..."
+					class="search-bar pr-3 pl-5 py-2 mx-6 text-neutral-900 rounded-2xl border-none focus:outline-none"
+				/>
+				<section class="history-dropdown">
+					<ul class="history-list">
+						<li class="history-item">Weezer</li>
+						<li class="history-item">Incubus</li>
+						<li class="history-item">Drake</li>
+						<li class="history-item">J. Cole</li>
+					</ul>
+				</section>
+			</div>
+			<button
+				class="artist-search-btn bg-red-900 px-6 rounded-2xl mx-6 my-4 h-10"
+			>
+				Search
+			</button>
+		</form>
+		<div
+			class="card-container flex-wrap lg:w-3/4 md:w-3/4 sm:w-4/5 mx-auto justify-center hide"
+		>
+			<section
+				class="song-card flex flex-col h-fit w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
+			>
+				<header
+					class="artist-name block rounded-t-xl w-full px-5 py-3 text-3xl"
+				></header>
+				<div
+					class="song-card-inner-flex flex flex-col justify-between h-full"
+				>
+					<div class="card-center mt-5 mx-4">
+						<p class="blurb"></p>
+					</div>
+					<div class="gif-content mx-auto my-5"></div>
+				</div>
+			</section>
+			<section
+				class="song-card flex flex-col h-fit w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
+			>
+				<header
+					class="artist-name block rounded-t-xl w-full px-5 py-3 text-3xl"
+				></header>
+				<div
+					class="song-card-inner-flex flex flex-col justify-between h-full"
+				>
+					<div class="card-center mt-5 mx-4">
+						<p class="blurb"></p>
+					</div>
+					<div class="gif-content mx-auto my-5"></div>
+				</div>
+			</section>
+			<section
+				class="song-card flex flex-col h-fit w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
+			>
+				<header
+					class="artist-name block rounded-t-xl w-full px-5 py-3 text-3xl"
+				></header>
+				<div
+					class="song-card-inner-flex flex flex-col justify-between h-full"
+				>
+					<div class="card-center mt-5 mx-4">
+						<p class="blurb"></p>
+					</div>
+					<div class="gif-content mx-auto my-5"></div>
+				</div>
+			</section>
+			<section
+				class="song-card flex flex-col h-fit w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
+			>
+				<header
+					class="artist-name block rounded-t-xl w-full px-5 py-3 text-3xl"
+				></header>
+				<div
+					class="song-card-inner-flex flex flex-col justify-between h-full"
+				>
+					<div class="card-center mt-5 mx-4">
+						<p class="blurb"></p>
+					</div>
+					<div class="gif-content mx-auto my-5"></div>
+				</div>
+			</section>
+			<section
+				class="song-card flex flex-col h-fit w-64 mx-10 mb-20 bg-neutral-800 rounded-xl"
+			>
+				<header
+					class="artist-name block rounded-t-xl w-full px-5 py-3 text-3xl"
+				></header>
+				<div
+					class="song-card-inner-flex flex flex-col justify-between h-full"
+				>
+					<div class="card-center mt-5 mx-4">
+						<p class="blurb"></p>
+					</div>
+					<div class="gif-content mx-auto my-5"></div>
+				</div>
+			</section>
+		</div>
+		<script src="./assets/scripts/search-history.js"></script>
+		<script src="./assets/scripts/script.js"></script>
+	</body>
+</html>
