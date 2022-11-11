@@ -39,7 +39,7 @@ Note:  The GIFs do not properly display in this image.  We disabled the API call
 
 Team coordination and planning was achieved using Github, Slack, and Zoom.  Github was utilized primarily for version control.  However, we also used Github Projects to create a kanban board.  This allowed us to know the overall project's status at any given time, and also update it in real time.  Github Pages was also our method of deploying our completed website.  Music artist data is being sourced courtesy of Napster API.  Memes are being sourced from Giphy API.
 
-We chose to use Tailwind as our CSS framework.  This is a framework that is growing in popularity and is thus going to be useful to know in the future.  Using Tailwind allowed us to quickly style containers and cards on our website so that we could focus on the beefier parts of the project.  We also incorporated the font Dosis from Google Fonts.  This was chosen because it is a nice blend of readability mixed with artistic flair, while also being somewhat minimalist.
+We chose to use Tailwind as our CSS framework.  This is a framework that is growing in popularity and is thus going to be useful to know in the future.  Using Tailwind allowed us to quickly style containers and cards on our website so that we could focus on the beefier parts of the project.  We also incorporated the font Dosis from Google Fonts (https://fonts.google.com/specimen/Dosis).  This was chosen because it is a nice blend of readability mixed with artistic flair, while also being somewhat minimalist.
 
 ## License
 
