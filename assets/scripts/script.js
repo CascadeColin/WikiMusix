@@ -75,7 +75,7 @@ function similarArtists(artistId) {
 
             //iterate through the first 5 similar artists
             // CHANGED TO 1 DUE TO GIPHY API LIMITS
-            for(i=0;i<5;i++) {
+            for(i=0;i<1;i++) {
                 //get data for the ith artist
                 let name = data.artists[i].name;
                 let blurb = data.artists[i].blurbs[0];
@@ -106,18 +106,19 @@ function getGif(name) {
 
     let query = 'https://api.giphy.com/v1/gifs/search?q=' + name + '&api_key=k7ib5hd5qzn7oJfBjJsdPcK1mCKE1mZm&limit=1&rating=pg';
 
-    // fetch(query)
-    // .then((response) => {
-    //     return response.json();
-    // })
-    // .then((giphy) => {
-    //     //gets URL for img tag
-    //     console.log(giphy);
-    //     console.log(giphy.data[0].url);
-    //     return giphy.data[0].url;
-    // })
+    fetch(query)
+    .then((response) => {
+        return response.json();
+    })
+    .then((giphy) => {
+        //gets URL for img tag
+        console.log(giphy);
+        var url = giphy.data[0].images.downsized_large.url;
+        console.log(url);
+        return url;
+    })
 
-    return "https://media2.giphy.com/media/U23WekMlGy6cImpMim/giphy.gif?cid=0a15940c15f3x16vjjgqtov3byb1mkfx1vfwumfoe1ogzp9m&rid=giphy.gif&ct=g";
+    // return "https://media2.giphy.com/media/U23WekMlGy6cImpMim/giphy.gif?cid=0a15940c15f3x16vjjgqtov3byb1mkfx1vfwumfoe1ogzp9m&rid=giphy.gif&ct=g";
 }
 
 
