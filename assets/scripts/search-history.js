@@ -3,9 +3,14 @@ var searchContainerEl = document.querySelector(".search-bar-dropdown-container")
 var historyDropdownEl = document.querySelector(".history-dropdown");
 var historyListEl = document.querySelector(".history-list");
 var submitButtonEl = document.querySelector(".artist-search-btn");
+var inputEl = document.querySelector(".search-bar");
+
+// selects CSS max-width property at 633px
+const mobileSearchLayout = window.matchMedia("(max-width: 633px)");
 
 //if client has no history, set it to an empty array
 var clientSearchHistory = JSON.parse(localStorage.getItem("m-search-hist")) || [];
+console.log(clientSearchHistory[0])
 localStorage.setItem("m-search-hist", JSON.stringify(clientSearchHistory));
 
 function init() {
@@ -82,3 +87,26 @@ var addToSearchHistory = function (item) {
 }
 
 init();
+
+// checks if screen is > or < 633px
+mobileSearchLayout.addEventListener("change", mobileSearch);
+
+// if screen < 633px and no search history, move the search button up the page.  more compact on mobile.  
+// If there is any search history or screen > 633px, use the original larger gap
+function mobileSearch(ev) {
+    if (ev.matches) {
+        // will almost always be undefined due to how clientSearchHistory is declared.  however, clientSearchHistory[0] = null if history is cleared without page reload.  important to have both to cover all outcomes.  Forcing page reload flashes a white screen which is hideous.
+        // "clientSearchHistory[0] == false" probably also works but I want to move on to next feature
+        if (clientSearchHistory[0] == undefined || null) {
+            inputEl.classList.remove("search-bar-extended");
+            inputEl.classList.add("search-bar");
+        } else {
+            inputEl.classList.add("search-bar-extended");
+            inputEl.classList.remove("search-bar");
+        }  
+    } else {
+        // included to make sure tablet/desktop keeps the correct class
+        inputEl.classList.remove("search-bar-extended");
+        inputEl.classList.add("search-bar");
+    }
+}

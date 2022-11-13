@@ -77,6 +77,14 @@
     display: inline-block;
 }
 
+.search-bar-extended {
+    width: 80vw;
+    background-color: #fffcef;
+    width: 24rem;
+    margin-top: 1rem;
+    margin-bottom: 8rem;
+}
+
 @media screen and (max-width: 633px) {
 
     .site-title {
@@ -85,7 +93,7 @@
 
     .search-bar {
         width: 80vw;
-        margin-bottom: 8rem;
+        /* margin-bottom: 8rem; */
     }
     .history-dropdown {
         width: 80vw;
