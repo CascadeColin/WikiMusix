@@ -3,6 +3,7 @@ var searchContainerEl = document.querySelector(".search-bar-dropdown-container")
 var historyDropdownEl = document.querySelector(".history-dropdown");
 var historyListEl = document.querySelector(".history-list");
 var submitButtonEl = document.querySelector(".artist-search-btn");
+var clearButtonEl = document.querySelector(".clear-history-btn");
 
 //if client has no history, set it to an empty array
 var clientSearchHistory = JSON.parse(localStorage.getItem("m-search-hist")) || [];
@@ -80,5 +81,13 @@ var addToSearchHistory = function (item) {
     localStorage.setItem("m-search-hist", JSON.stringify(clientSearchHistory));
     refreshSearchHistoryElement();
 }
+
+// FEATURE: Clear History
+
+clearButtonEl.addEventListener("click", () => {
+    //delete localStorage, then reload page to run init()
+    localStorage.removeItem("m-search-hist");
+    init();
+})
 
 init();
