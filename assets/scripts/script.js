@@ -82,20 +82,20 @@ function similarArtists(artistId) {
                 let blurb = data.artists[i].blurbs[0];
                 let gifQueryInput = name.toLowerCase().replaceAll(' ','-');
 
-                // var response = await fetch('https://api.giphy.com/v1/gifs/search?q=' + gifQueryInput + '&api_key=k7ib5hd5qzn7oJfBjJsdPcK1mCKE1mZm&limit=1&rating=pg')
+                var response = await fetch('https://api.giphy.com/v1/gifs/search?q=' + gifQueryInput + '&api_key=k7ib5hd5qzn7oJfBjJsdPcK1mCKE1mZm&limit=1&rating=pg')
                 
-                // var gifJSON = await response.json();
+                var gifJSON = await response.json();
 
                 // //gets URL for img tag
                 // console.log(gifJSON);
-                // let gifURL = gifJSON.data[0].images.downsized_large.url;
+                let gifURL = gifJSON.data[0].images.downsized_large.url;
                 // console.log(gifURL);
 
                 //update ith card with ith artist info
                 cardHeaderCollection[i].textContent = name;
                 cardBlurbCollection[i].textContent = blurb;
-                // cardGifCollection[i].style.backgroundImage = "url('" + gifURL + "')";
-                cardGifCollection[i].style.backgroundImage = "url('https://media3.giphy.com/media/LmC8GSARPDatSC6J8X/giphy.gif?cid=0a15940cui9389ix24h8ns15siltc6l93uprqdd2fzzagq2g&rid=giphy.gif&ct=g')";
+                cardGifCollection[i].style.backgroundImage = "url('" + gifURL + "')";
+                // cardGifCollection[i].style.backgroundImage = "url('https://media3.giphy.com/media/LmC8GSARPDatSC6J8X/giphy.gif?cid=0a15940cui9389ix24h8ns15siltc6l93uprqdd2fzzagq2g&rid=giphy.gif&ct=g')";
 
             }
 

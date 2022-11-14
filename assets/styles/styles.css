@@ -24,6 +24,19 @@
     transition: 0.1s ease;
 }
 
+/* FEATURE: Clear History */
+
+.clear-history-btn {
+    color: #fffcef;
+    background-color: #a33c3c;
+    transition: 0.1s ease;
+}
+
+.clear-history-btn:hover {
+    background-color: #a33c3c;
+    transition: 0.1s ease;
+}
+
 /* positions dropdown directly beneath search bar */
 .history-dropdown {
     display: none;
